@@ -138,7 +138,7 @@ class Account:
             concrete_storage, address=self.address, dynamic_loader=dynamic_loader
         )
 
-        self.storage = TransientStorage()
+        self.transient_storage = TransientStorage()
 
         # Metadata
         if contract_name is None:
