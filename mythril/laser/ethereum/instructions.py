@@ -1523,6 +1523,31 @@ class Instruction:
         global_state.environment.active_account.storage[index] = value
         return [global_state]
 
+    @StateTransition()
+    def tload_(self, global_state: GlobalState) -> List[GlobalState]:
+        """
+
+        :param global_state:
+        :return:
+        """
+        state = global_state.machine_state
+        index = state.stack.pop()
+        state.stack.append(global_state.environment.active_account.transient_storage[index])
+        return [global_state]
+
+    # maybe add statetransition parameter, see how tests perform and look at analysis modules
+    @StateTransition()
+    def tstore_(self, global_state: GlobalState) -> List[GlobalState]:
+        """
+
+        :param global:state:
+        :return:
+        """
+        state = global_state.machine_state
+        index, value = state.stack.pop(), state.stack.pop()
+        global_state.environment.active_account.transient_storage[index] = value
+        return [global_state]
+
     @StateTransition(increment_pc=False, enable_gas=False)
     def jump_(self, global_state: GlobalState) -> List[GlobalState]:
         """
