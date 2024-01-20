@@ -12,7 +12,7 @@ log = logging.getLogger(__name__)
 class TransientStorage:
     """A class representing contract transient storage"""
 
-    def __init__(self, concrete=False) -> None:
+    def __init__(self) -> None:
         """Constructor for transient storage."""
         
         self._transientStorage: Dict[BitVec, BitVec] = {}
@@ -35,11 +35,7 @@ class TransientStorage:
         self._transientStorage[key] = value
 
     def __deepcopy__(self, memodict=dict()):
-        """always treat uninitialized values as false for transient storage for now, see how tests perform"""
-        concrete = False
-        transientStorage = TransientStorage(
-            concrete=concrete
-        )
+        transientStorage = TransientStorage()
         """deepcopy (like storage) instead of copy like for memory, see how tests perform"""
         transientStorage._transientStorage = deepcopy(self._transientStorage)
         return transientStorage
