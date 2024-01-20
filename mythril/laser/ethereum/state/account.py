@@ -11,6 +11,7 @@ from mythril.laser.smt import Array, K, BitVec, simplify, BaseArray, If, Bool
 from mythril.disassembler.disassembly import Disassembly
 from mythril.laser.smt import symbol_factory
 from mythril.support.support_args import args
+from mythril.laser.ethereum.state.transient_storage import TransientStorage
 
 log = logging.getLogger(__name__)
 
@@ -136,6 +137,8 @@ class Account:
         self.storage = Storage(
             concrete_storage, address=self.address, dynamic_loader=dynamic_loader
         )
+
+        self.storage = TransientStorage()
 
         # Metadata
         if contract_name is None:
