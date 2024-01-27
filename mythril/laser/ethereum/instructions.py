@@ -1530,7 +1530,7 @@ class Instruction:
         :param global_state:
         :return:
         """
-        state = global_state.machine_state
+        state = global_state.mstate
         index = state.stack.pop()
         state.stack.append(global_state.environment.active_account.transient_storage[index])
         return [global_state]
@@ -1543,7 +1543,7 @@ class Instruction:
         :param global:state:
         :return:
         """
-        state = global_state.machine_state
+        state = global_state.mstate
         index, value = state.stack.pop(), state.stack.pop()
         global_state.environment.active_account.transient_storage[index] = value
         return [global_state]
