@@ -26,7 +26,11 @@ class TransientStorage:
         """
 
         transientStorage = self._transientStorage
-        return simplify(transientStorage[item])
+        try:
+            return simplify(transientStorage[item])
+        except KeyError:
+            # if index uninitialized
+            return 0;
 
     def __setitem__(self, key, value: Any) -> None:
         if isinstance(value, Bool):
