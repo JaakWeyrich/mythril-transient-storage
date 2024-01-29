@@ -227,5 +227,6 @@ class Account:
             nonce=self.nonce,
         )
         new_account.storage = deepcopy(self.storage)
+        new_account.transient_storage =deepcopy(self.transient_storage)
         new_account.code = self.code
         return new_account
