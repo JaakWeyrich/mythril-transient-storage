@@ -23,7 +23,7 @@ Check whether the account state is accesses after the execution of an external c
 """
 
 CALL_LIST = ["CALL", "DELEGATECALL", "CALLCODE"]
-STATE_READ_WRITE_LIST = ["SSTORE", "SLOAD", "CREATE", "CREATE2"]
+STATE_READ_WRITE_LIST = ["SSTORE", "SLOAD", "CREATE", "CREATE2", "TSTORE", "TLOAD"]
 
 
 class StateChangeCallsAnnotation(StateAnnotation):
@@ -68,7 +68,7 @@ class StateChangeCallsAnnotation(StateAnnotation):
         severity = "Medium" if self.user_defined_address else "Low"
         address = global_state.get_current_instruction()["address"]
         logging.debug(
-            "[EXTERNAL_CALLS] Detected state changes at addresses: {}".format(address)
+            "[EXTERNAL_CALLS] Detected storage / transient storage access at addresses: {}".format(address)
         )
         read_or_write = "Write to"
         if global_state.get_current_instruction()["opcode"] == "SLOAD":
@@ -78,8 +78,8 @@ class StateChangeCallsAnnotation(StateAnnotation):
             read_or_write
         )
         description_tail = (
-            "The contract account state is accessed after an external call to a {} address. "
-            "To prevent reentrancy issues, consider accessing the state only before the call, especially if the callee is untrusted. "
+            "The contract account storage or transient storage is accessed after an external call to a {} address. "
+            "To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. "
             "Alternatively, a reentrancy lock can be used to prevent "
             "untrusted callees from re-entering the contract in an intermediate state.".format(
                 address_type
@@ -90,7 +90,7 @@ class StateChangeCallsAnnotation(StateAnnotation):
             contract=global_state.environment.active_account.contract_name,
             function_name=global_state.environment.active_function_name,
             address=address,
-            title="State access after external call",
+            title="Storage or transient storage access after external call",
             severity=severity,
             description_head=description_head,
             description_tail=description_tail,
@@ -105,7 +105,7 @@ class StateChangeAfterCall(DetectionModule):
     """This module searches for state change after low level calls (e.g. call.value()) that
     forward gas to the callee."""
 
-    name = "State change after an external call"
+    name = "Storage or transient storage access after an external call"
     swc_id = REENTRANCY
     description = DESCRIPTION
     entry_point = EntryPoint.CALLBACK
