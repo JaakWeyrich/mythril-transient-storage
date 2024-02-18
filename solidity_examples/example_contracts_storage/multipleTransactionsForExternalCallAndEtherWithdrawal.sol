@@ -2,12 +2,10 @@
 pragma solidity ^0.8.0;
 
 contract MemoryStoreAndLoad {
-    function storeAndLoad(uint256 _input) public returns (uint256 _output) {
+    function storeAndLoad(uint256 _input) public {
         assembly {
             // Store the input at storage location 0x80
             sstore(0x80, _input)
-            // Load the value from storage location 0x80
-            _output := sload(0x80)
         }
     }
     

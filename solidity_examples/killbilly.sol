@@ -1,4 +1,4 @@
-pragma solidity 0.5.7;
+
 
 contract KillBilly {
 	bool public is_killable;
@@ -19,6 +19,6 @@ contract KillBilly {
 
 	function commencekilling() public {
 	    require(is_killable);
-	 	selfdestruct(msg.sender);
+	 	selfdestruct(payable(msg.sender));
 	}
 }

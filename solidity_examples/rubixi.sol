@@ -1,4 +1,3 @@
-pragma solidity 0.5.0;
 
 
 contract Rubixi {
@@ -21,13 +20,13 @@ contract Rubixi {
     }
 
     //Fallback function
-    function() external payable {
+    receive() external payable {
         init();
     }
 
     //Sets creator
     function dynamicPyramid() public {
-        creator = msg.sender;
+        creator = payable(msg.sender);
     }
 
     Participant[] private participants;
@@ -129,7 +128,7 @@ contract Rubixi {
     //Function called for valid tx to the contract
     function addPayout(uint _fee) private {
         //Adds new address to participant array
-        participants.push(Participant(msg.sender, (msg.value * pyramidMultiplier) / 100));
+        participants.push(Participant(payable(msg.sender), (msg.value * pyramidMultiplier) / 100));
 
         // These statements ensure a quicker payout system to
         // later pyramid entrants, so the pyramid has a longer lifespan

@@ -1,4 +1,3 @@
-pragma solidity 0.5.0;
 
 
 contract EtherStore {
@@ -16,10 +15,10 @@ contract EtherStore {
         // limit the withdrawal
         require(_weiToWithdraw <= withdrawalLimit);
         // limit the time allowed to withdraw
-        require(now >= lastWithdrawTime[msg.sender] + 1 weeks);
-        (bool success, bytes memory data) = msg.sender.call.value(_weiToWithdraw)("");
+        require(block.timestamp >= lastWithdrawTime[msg.sender] + 1 weeks);
+        (bool success, bytes memory data) = msg.sender.call{value: _weiToWithdraw}("");
         require(success);
         balances[msg.sender] -= _weiToWithdraw;
-        lastWithdrawTime[msg.sender] = now;
+        lastWithdrawTime[msg.sender] = block.timestamp;
     }
  }

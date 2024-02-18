@@ -1,4 +1,3 @@
-pragma solidity 0.5.0;
 
 
 contract TimeLock {
@@ -8,7 +7,7 @@ contract TimeLock {
 
     function deposit() public payable {
         balances[msg.sender] += msg.value;
-        lockTime[msg.sender] = now + 1 weeks;
+        lockTime[msg.sender] = block.timestamp + 1 weeks;
     }
 
     function increaseLockTime(uint _secondsToIncrease) public {
@@ -17,8 +16,8 @@ contract TimeLock {
 
     function withdraw() public {
         require(balances[msg.sender] > 0);
-        require(now > lockTime[msg.sender]);
+        require(block.timestamp > lockTime[msg.sender]);
         balances[msg.sender] = 0;
-        msg.sender.transfer(balances[msg.sender]);
+        payable(msg.sender).transfer(balances[msg.sender]);
     }
 }

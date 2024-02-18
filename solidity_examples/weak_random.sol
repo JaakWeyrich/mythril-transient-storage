@@ -1,4 +1,3 @@
-pragma solidity 0.5.0;
 
 
 contract WeakRandom {
@@ -15,12 +14,12 @@ contract WeakRandom {
     uint public nextTicket = 0;
     mapping (uint => Contestant) public contestants;
 
-    function () payable external {
+    receive() payable external {
         uint moneySent = msg.value;
 
         while (moneySent >= pricePerTicket && nextTicket < totalTickets) {
             uint currTicket = nextTicket++;
-            contestants[currTicket] = Contestant(msg.sender, gameId);
+            contestants[currTicket] = Contestant(payable(msg.sender), gameId);
             moneySent -= pricePerTicket;
         }
 
@@ -30,13 +29,13 @@ contract WeakRandom {
 
         // Send back leftover money
         if (moneySent > 0) {
-            msg.sender.transfer(moneySent);
+            payable(msg.sender).transfer(moneySent);
         }
     }
 
     function chooseWinner() private {
-        address seed1 = contestants[uint(block.coinbase) % totalTickets].addr;
-        address seed2 = contestants[uint(msg.sender) % totalTickets].addr;
+        address seed1 = contestants[uint160(address(block.coinbase)) % totalTickets].addr;
+        address seed2 = contestants[uint160(msg.sender) % totalTickets].addr;
         uint seed3 = block.difficulty;
         bytes32 randHash = keccak256(abi.encode(seed1, seed2, seed3));
 
