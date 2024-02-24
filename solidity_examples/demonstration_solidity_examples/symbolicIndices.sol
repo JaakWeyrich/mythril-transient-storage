@@ -7,7 +7,7 @@ contract myContract {
 
     constructor() payable {}
 
-    function arbitraryWrite(uint256 _key1, uint256 _key2) public {
+    function symbolicIndices(uint256 _key1, uint256 _key2) public {
         assembly {
             sstore(_key1, 123)
 
