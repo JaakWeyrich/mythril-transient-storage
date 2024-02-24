@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-// This demonstration contract demonstrates that transient storage does recognize the potential equivalence of two hashes used as indices.
+// This demonstration contract demonstrates that transient storage does recognize the equivalence of two hashes used as indices.
 
 contract MyContract {
 
