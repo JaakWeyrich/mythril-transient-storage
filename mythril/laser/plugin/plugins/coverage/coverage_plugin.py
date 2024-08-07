@@ -59,11 +59,11 @@ class InstructionCoveragePlugin(LaserPlugin):
                         string_code = bytearray(code).hex()
                     except TypeError:
                         string_code = "<symbolic code>"
-                log.info(
-                    "Achieved {:.2f}% coverage for code: {}".format(
-                        cov_percentage, string_code
-                    )
-                )
+                #log.info(
+                #    "Achieved {:.2f}% coverage for code: {}".format(
+                #        cov_percentage, string_code
+                #    )
+                #)
 
         @symbolic_vm.laser_hook("execute_state")
         def execute_state_hook(global_state: GlobalState):

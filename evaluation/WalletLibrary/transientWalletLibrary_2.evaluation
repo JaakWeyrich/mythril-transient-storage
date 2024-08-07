@@ -1,0 +1,86 @@
+Execution 1:
+The analysis was completed successfully. No issues were detected.
+
+
+real	1m17.434s
+user	1m15.842s
+sys	0m1.359s
+------------------------
+Execution 2:
+The analysis was completed successfully. No issues were detected.
+
+
+real	1m16.710s
+user	1m15.196s
+sys	0m1.296s
+------------------------
+Execution 3:
+The analysis was completed successfully. No issues were detected.
+
+
+real	1m15.819s
+user	1m14.016s
+sys	0m1.466s
+------------------------
+Execution 4:
+The analysis was completed successfully. No issues were detected.
+
+
+real	1m17.952s
+user	1m16.477s
+sys	0m1.273s
+------------------------
+Execution 5:
+The analysis was completed successfully. No issues were detected.
+
+
+real	1m19.739s
+user	1m18.166s
+sys	0m1.320s
+------------------------
+Execution 6:
+The analysis was completed successfully. No issues were detected.
+
+
+real	1m19.347s
+user	1m17.619s
+sys	0m1.443s
+------------------------
+Execution 7:
+The analysis was completed successfully. No issues were detected.
+
+
+real	1m15.465s
+user	1m13.852s
+sys	0m1.397s
+------------------------
+Execution 8:
+The analysis was completed successfully. No issues were detected.
+
+
+real	1m19.188s
+user	1m17.662s
+sys	0m1.309s
+------------------------
+Execution 9:
+The analysis was completed successfully. No issues were detected.
+
+
+real	1m17.120s
+user	1m15.511s
+sys	0m1.345s
+------------------------
+Execution 10:
+The analysis was completed successfully. No issues were detected.
+
+
+real	1m16.839s
+user	1m15.310s
+sys	0m1.413s
+------------------------
+Mean real time: 77.5613 seconds
+Mean user time: 75.9651 seconds
+Mean sys time: 1.3621 seconds
+Variance of real time: 2.17971
+Variance of user time: 2.24745
+Variance of sys time: 0.00426121

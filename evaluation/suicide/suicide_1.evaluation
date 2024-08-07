@@ -1,0 +1,276 @@
+Execution 1:
+==== Unprotected Selfdestruct ====
+SWC ID: 106
+Severity: High
+Contract: MAIN
+Function name: kill(address)
+PC address: 148
+Estimated Gas Usage: 458 - 553
+Any sender can cause the contract to self-destruct.
+Any sender can trigger execution of the SELFDESTRUCT instruction to destroy this contract account. Review the transaction trace generated for this issue and make sure that appropriate security controls are in place to prevent unrestricted access.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x8, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: kill(address), txdata: 0xcbf0b0c00000000000000000000000000000000000000000000000000000000000000000, decoded_data: ('0x0000000000000000000000000000000000000000',), value: 0x0
+
+
+
+real	0m3.829s
+user	0m3.234s
+sys	0m0.419s
+------------------------
+Execution 2:
+==== Unprotected Selfdestruct ====
+SWC ID: 106
+Severity: High
+Contract: MAIN
+Function name: kill(address)
+PC address: 148
+Estimated Gas Usage: 458 - 553
+Any sender can cause the contract to self-destruct.
+Any sender can trigger execution of the SELFDESTRUCT instruction to destroy this contract account. Review the transaction trace generated for this issue and make sure that appropriate security controls are in place to prevent unrestricted access.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x8, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: kill(address), txdata: 0xcbf0b0c00000000000000000000000000000000000000000000000000000000000000000, decoded_data: ('0x0000000000000000000000000000000000000000',), value: 0x0
+
+
+
+real	0m3.693s
+user	0m3.096s
+sys	0m0.407s
+------------------------
+Execution 3:
+==== Unprotected Selfdestruct ====
+SWC ID: 106
+Severity: High
+Contract: MAIN
+Function name: kill(address)
+PC address: 148
+Estimated Gas Usage: 458 - 553
+Any sender can cause the contract to self-destruct.
+Any sender can trigger execution of the SELFDESTRUCT instruction to destroy this contract account. Review the transaction trace generated for this issue and make sure that appropriate security controls are in place to prevent unrestricted access.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x8, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: kill(address), txdata: 0xcbf0b0c00000000000000000000000000000000000000000000000000000000000000000, decoded_data: ('0x0000000000000000000000000000000000000000',), value: 0x0
+
+
+
+real	0m3.966s
+user	0m3.354s
+sys	0m0.408s
+------------------------
+Execution 4:
+==== Unprotected Selfdestruct ====
+SWC ID: 106
+Severity: High
+Contract: MAIN
+Function name: kill(address)
+PC address: 148
+Estimated Gas Usage: 458 - 553
+Any sender can cause the contract to self-destruct.
+Any sender can trigger execution of the SELFDESTRUCT instruction to destroy this contract account. Review the transaction trace generated for this issue and make sure that appropriate security controls are in place to prevent unrestricted access.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x8, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: kill(address), txdata: 0xcbf0b0c00000000000000000000000000000000000000000000000000000000000000000, decoded_data: ('0x0000000000000000000000000000000000000000',), value: 0x0
+
+
+
+real	0m3.826s
+user	0m3.090s
+sys	0m0.578s
+------------------------
+Execution 5:
+==== Unprotected Selfdestruct ====
+SWC ID: 106
+Severity: High
+Contract: MAIN
+Function name: kill(address)
+PC address: 148
+Estimated Gas Usage: 458 - 553
+Any sender can cause the contract to self-destruct.
+Any sender can trigger execution of the SELFDESTRUCT instruction to destroy this contract account. Review the transaction trace generated for this issue and make sure that appropriate security controls are in place to prevent unrestricted access.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x8, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: kill(address), txdata: 0xcbf0b0c00000000000000000000000000000000000000000000000000000000000000000, decoded_data: ('0x0000000000000000000000000000000000000000',), value: 0x0
+
+
+
+real	0m3.826s
+user	0m3.282s
+sys	0m0.403s
+------------------------
+Execution 6:
+==== Unprotected Selfdestruct ====
+SWC ID: 106
+Severity: High
+Contract: MAIN
+Function name: kill(address)
+PC address: 148
+Estimated Gas Usage: 458 - 553
+Any sender can cause the contract to self-destruct.
+Any sender can trigger execution of the SELFDESTRUCT instruction to destroy this contract account. Review the transaction trace generated for this issue and make sure that appropriate security controls are in place to prevent unrestricted access.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x8, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: kill(address), txdata: 0xcbf0b0c00000000000000000000000000000000000000000000000000000000000000000, decoded_data: ('0x0000000000000000000000000000000000000000',), value: 0x0
+
+
+
+real	0m3.941s
+user	0m3.283s
+sys	0m0.536s
+------------------------
+Execution 7:
+==== Unprotected Selfdestruct ====
+SWC ID: 106
+Severity: High
+Contract: MAIN
+Function name: kill(address)
+PC address: 148
+Estimated Gas Usage: 458 - 553
+Any sender can cause the contract to self-destruct.
+Any sender can trigger execution of the SELFDESTRUCT instruction to destroy this contract account. Review the transaction trace generated for this issue and make sure that appropriate security controls are in place to prevent unrestricted access.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x8, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: kill(address), txdata: 0xcbf0b0c00000000000000000000000000000000000000000000000000000000000000000, decoded_data: ('0x0000000000000000000000000000000000000000',), value: 0x0
+
+
+
+real	0m3.797s
+user	0m3.187s
+sys	0m0.483s
+------------------------
+Execution 8:
+==== Unprotected Selfdestruct ====
+SWC ID: 106
+Severity: High
+Contract: MAIN
+Function name: kill(address)
+PC address: 148
+Estimated Gas Usage: 458 - 553
+Any sender can cause the contract to self-destruct.
+Any sender can trigger execution of the SELFDESTRUCT instruction to destroy this contract account. Review the transaction trace generated for this issue and make sure that appropriate security controls are in place to prevent unrestricted access.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x8, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: kill(address), txdata: 0xcbf0b0c00000000000000000000000000000000000000000000000000000000000000000, decoded_data: ('0x0000000000000000000000000000000000000000',), value: 0x0
+
+
+
+real	0m3.851s
+user	0m3.190s
+sys	0m0.481s
+------------------------
+Execution 9:
+==== Unprotected Selfdestruct ====
+SWC ID: 106
+Severity: High
+Contract: MAIN
+Function name: kill(address)
+PC address: 148
+Estimated Gas Usage: 458 - 553
+Any sender can cause the contract to self-destruct.
+Any sender can trigger execution of the SELFDESTRUCT instruction to destroy this contract account. Review the transaction trace generated for this issue and make sure that appropriate security controls are in place to prevent unrestricted access.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x8, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: kill(address), txdata: 0xcbf0b0c00000000000000000000000000000000000000000000000000000000000000000, decoded_data: ('0x0000000000000000000000000000000000000000',), value: 0x0
+
+
+
+real	0m3.718s
+user	0m3.102s
+sys	0m0.499s
+------------------------
+Execution 10:
+==== Unprotected Selfdestruct ====
+SWC ID: 106
+Severity: High
+Contract: MAIN
+Function name: kill(address)
+PC address: 148
+Estimated Gas Usage: 458 - 553
+Any sender can cause the contract to self-destruct.
+Any sender can trigger execution of the SELFDESTRUCT instruction to destroy this contract account. Review the transaction trace generated for this issue and make sure that appropriate security controls are in place to prevent unrestricted access.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x8, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: kill(address), txdata: 0xcbf0b0c00000000000000000000000000000000000000000000000000000000000000000, decoded_data: ('0x0000000000000000000000000000000000000000',), value: 0x0
+
+
+
+real	0m3.867s
+user	0m3.219s
+sys	0m0.495s
+------------------------
+Mean real time: 3.8314 seconds
+Mean user time: 3.2037 seconds
+Mean sys time: 0.4709 seconds
+Variance of real time: 0.00722693
+Variance of user time: 0.00794423
+Variance of sys time: 0.0036301

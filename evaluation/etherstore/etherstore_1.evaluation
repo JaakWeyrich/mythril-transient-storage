@@ -1,0 +1,1076 @@
+Execution 1:
+==== Dependence on predictable environment variable ====
+SWC ID: 116
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 479
+Estimated Gas Usage: 3214 - 3689
+A control flow decision is made based on The block.timestamp environment variable.
+The block.timestamp environment variable is used to determine a control flow decision. Note that the values of variables like coinbase, gaslimit, block number and timestamp are predictable and can be manipulated by a malicious miner. Also keep in mind that attackers know hashes of earlier blocks. Don't use any of those environment variables as sources of randomness and be aware that use of these variables introduces a certain level of trust into miners.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x100000203b79d, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x100, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== External Call To User-Supplied Address ====
+SWC ID: 107
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 533
+Estimated Gas Usage: 15517 - 90841
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x10000040000235ec, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 664
+Estimated Gas Usage: 15517 - 90841
+Read of persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x400000000020af1ca, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1000000000001, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 680
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x400000000020af1ca, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1000000000001, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 746
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x400000000020af1ca, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1000000000001, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+
+
+real	0m19.128s
+user	0m18.196s
+sys	0m0.695s
+------------------------
+Execution 2:
+==== Dependence on predictable environment variable ====
+SWC ID: 116
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 479
+Estimated Gas Usage: 3214 - 3689
+A control flow decision is made based on The block.timestamp environment variable.
+The block.timestamp environment variable is used to determine a control flow decision. Note that the values of variables like coinbase, gaslimit, block number and timestamp are predictable and can be manipulated by a malicious miner. Also keep in mind that attackers know hashes of earlier blocks. Don't use any of those environment variables as sources of randomness and be aware that use of these variables introduces a certain level of trust into miners.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x100000206b79d, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x40000, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== External Call To User-Supplied Address ====
+SWC ID: 107
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 533
+Estimated Gas Usage: 15517 - 90841
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x21b018c80040a269, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 664
+Estimated Gas Usage: 15517 - 90841
+Read of persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x1400000000319a4, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 680
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x1400000000319a4, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 746
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x1400000000319a4, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+
+
+real	0m18.670s
+user	0m17.725s
+sys	0m0.721s
+------------------------
+Execution 3:
+==== Dependence on predictable environment variable ====
+SWC ID: 116
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 479
+Estimated Gas Usage: 3214 - 3689
+A control flow decision is made based on The block.timestamp environment variable.
+The block.timestamp environment variable is used to determine a control flow decision. Note that the values of variables like coinbase, gaslimit, block number and timestamp are predictable and can be manipulated by a malicious miner. Also keep in mind that attackers know hashes of earlier blocks. Don't use any of those environment variables as sources of randomness and be aware that use of these variables introduces a certain level of trust into miners.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x10000000fb79d, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x10000000, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== External Call To User-Supplied Address ====
+SWC ID: 107
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 533
+Estimated Gas Usage: 15517 - 90841
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x401000000020bb3ed, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x20040000000000001, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 664
+Estimated Gas Usage: 15517 - 90841
+Read of persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0xc000000003b7ed, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 680
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0xc000000003b7ed, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 746
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0xc000000003b7ed, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+
+
+real	0m18.018s
+user	0m17.177s
+sys	0m0.649s
+------------------------
+Execution 4:
+==== Dependence on predictable environment variable ====
+SWC ID: 116
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 479
+Estimated Gas Usage: 3214 - 3689
+A control flow decision is made based on The block.timestamp environment variable.
+The block.timestamp environment variable is used to determine a control flow decision. Note that the values of variables like coinbase, gaslimit, block number and timestamp are predictable and can be manipulated by a malicious miner. Also keep in mind that attackers know hashes of earlier blocks. Don't use any of those environment variables as sources of randomness and be aware that use of these variables introduces a certain level of trust into miners.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x10000000fb79d, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x10000000, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== External Call To User-Supplied Address ====
+SWC ID: 107
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 533
+Estimated Gas Usage: 15517 - 90841
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x810001000bb7ed, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 664
+Estimated Gas Usage: 15517 - 90841
+Read of persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x800000020291e4, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 680
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x800000020291e4, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 746
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x800000020291e4, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+
+
+real	0m18.039s
+user	0m17.231s
+sys	0m0.699s
+------------------------
+Execution 5:
+==== Dependence on predictable environment variable ====
+SWC ID: 116
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 479
+Estimated Gas Usage: 3214 - 3689
+A control flow decision is made based on The block.timestamp environment variable.
+The block.timestamp environment variable is used to determine a control flow decision. Note that the values of variables like coinbase, gaslimit, block number and timestamp are predictable and can be manipulated by a malicious miner. Also keep in mind that attackers know hashes of earlier blocks. Don't use any of those environment variables as sources of randomness and be aware that use of these variables introduces a certain level of trust into miners.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x10000000fb79d, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x10000000, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== External Call To User-Supplied Address ====
+SWC ID: 107
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 533
+Estimated Gas Usage: 15517 - 90841
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x1000000000bb36d, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 664
+Estimated Gas Usage: 15517 - 90841
+Read of persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x69005111803cd, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 680
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x69005111803cd, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 746
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x69005111803cd, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+
+
+real	0m19.107s
+user	0m18.275s
+sys	0m0.740s
+------------------------
+Execution 6:
+==== Dependence on predictable environment variable ====
+SWC ID: 116
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 479
+Estimated Gas Usage: 3214 - 3689
+A control flow decision is made based on The block.timestamp environment variable.
+The block.timestamp environment variable is used to determine a control flow decision. Note that the values of variables like coinbase, gaslimit, block number and timestamp are predictable and can be manipulated by a malicious miner. Also keep in mind that attackers know hashes of earlier blocks. Don't use any of those environment variables as sources of randomness and be aware that use of these variables introduces a certain level of trust into miners.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x100000203b79d, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x100, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== External Call To User-Supplied Address ====
+SWC ID: 107
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 533
+Estimated Gas Usage: 15517 - 90841
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x41000001181161, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1000000000001, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 664
+Estimated Gas Usage: 15517 - 90841
+Read of persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x200028c0880043894, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x40010000000000008, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 680
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x200028c0880043894, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x40010000000000008, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 746
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x200028c0880043894, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x40010000000000008, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+
+
+real	0m18.448s
+user	0m17.598s
+sys	0m0.692s
+------------------------
+Execution 7:
+==== Dependence on predictable environment variable ====
+SWC ID: 116
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 479
+Estimated Gas Usage: 3214 - 3689
+A control flow decision is made based on The block.timestamp environment variable.
+The block.timestamp environment variable is used to determine a control flow decision. Note that the values of variables like coinbase, gaslimit, block number and timestamp are predictable and can be manipulated by a malicious miner. Also keep in mind that attackers know hashes of earlier blocks. Don't use any of those environment variables as sources of randomness and be aware that use of these variables introduces a certain level of trust into miners.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x10000000db79d, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x200000000, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== External Call To User-Supplied Address ====
+SWC ID: 107
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 533
+Estimated Gas Usage: 15517 - 90841
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x300f420c1452283ad, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x2, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 664
+Estimated Gas Usage: 15517 - 90841
+Read of persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x400000400000bbbad, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x4, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 680
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x400000400000bbbad, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x4, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 746
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x400000400000bbbad, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x4, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+
+
+real	0m18.968s
+user	0m18.063s
+sys	0m0.699s
+------------------------
+Execution 8:
+==== Dependence on predictable environment variable ====
+SWC ID: 116
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 479
+Estimated Gas Usage: 3214 - 3689
+A control flow decision is made based on The block.timestamp environment variable.
+The block.timestamp environment variable is used to determine a control flow decision. Note that the values of variables like coinbase, gaslimit, block number and timestamp are predictable and can be manipulated by a malicious miner. Also keep in mind that attackers know hashes of earlier blocks. Don't use any of those environment variables as sources of randomness and be aware that use of these variables introduces a certain level of trust into miners.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x10000000fb79d, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x10000000, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== External Call To User-Supplied Address ====
+SWC ID: 107
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 533
+Estimated Gas Usage: 15517 - 90841
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x1000001020a01ec, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x2, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 664
+Estimated Gas Usage: 15517 - 90841
+Read of persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x400000000a11ec, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 680
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x400000000a11ec, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 746
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x400000000a11ec, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+
+
+real	0m19.032s
+user	0m18.174s
+sys	0m0.683s
+------------------------
+Execution 9:
+==== Dependence on predictable environment variable ====
+SWC ID: 116
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 479
+Estimated Gas Usage: 3214 - 3689
+A control flow decision is made based on The block.timestamp environment variable.
+The block.timestamp environment variable is used to determine a control flow decision. Note that the values of variables like coinbase, gaslimit, block number and timestamp are predictable and can be manipulated by a malicious miner. Also keep in mind that attackers know hashes of earlier blocks. Don't use any of those environment variables as sources of randomness and be aware that use of these variables introduces a certain level of trust into miners.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x100000203b79d, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x100, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== External Call To User-Supplied Address ====
+SWC ID: 107
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 533
+Estimated Gas Usage: 15517 - 90841
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x20000400020b97ed, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1000000000003, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 664
+Estimated Gas Usage: 15517 - 90841
+Read of persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x2006d, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 680
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x2006d, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 746
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x2006d, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+
+
+real	0m18.433s
+user	0m17.536s
+sys	0m0.692s
+------------------------
+Execution 10:
+==== Dependence on predictable environment variable ====
+SWC ID: 116
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 479
+Estimated Gas Usage: 3214 - 3689
+A control flow decision is made based on The block.timestamp environment variable.
+The block.timestamp environment variable is used to determine a control flow decision. Note that the values of variables like coinbase, gaslimit, block number and timestamp are predictable and can be manipulated by a malicious miner. Also keep in mind that attackers know hashes of earlier blocks. Don't use any of those environment variables as sources of randomness and be aware that use of these variables introduces a certain level of trust into miners.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x10000000fb79d, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x10000000, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== External Call To User-Supplied Address ====
+SWC ID: 107
+Severity: Low
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 533
+Estimated Gas Usage: 15517 - 90841
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x420810000000bb3e9, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x2, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 664
+Estimated Gas Usage: 15517 - 90841
+Read of persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x400400000020ab3ed, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 680
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x400400000020ab3ed, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+==== Storage or transient storage access after external call ====
+SWC ID: 107
+Severity: Medium
+Contract: MAIN
+Function name: withdrawFunds(uint256)
+PC address: 746
+Estimated Gas Usage: 15517 - 90841
+Write to persistent state following external call
+The contract account storage or transient storage is accessed after an external call to a user defined address. To prevent reentrancy issues, consider accessing the storage / transient storage only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x400400000020ab3ed, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: withdrawFunds(uint256), txdata: 0x155dd5ee0000000000000000000000000000000000000000000000000000000000000000, decoded_data: (0,), value: 0x0
+
+
+
+real	0m17.483s
+user	0m16.617s
+sys	0m0.715s
+------------------------
+Mean real time: 18.5326 seconds
+Mean user time: 17.6592 seconds
+Mean sys time: 0.6985 seconds
+Variance of real time: 0.30772
+Variance of user time: 0.291194
+Variance of sys time: 0.000587611

@@ -1,0 +1,162 @@
+----------------------------------------
+Files: BECToken/BECToken_1.evaluation & BECToken/transientBECToken_1.evaluation
+Normal Mean real time:     6.7424 seconds
+Normal Variance:           0.0203889
+Transient Mean real time:  6.5751 seconds
+Transient Variance:        0.024727
+Mean difference:           0.1673 seconds
+Variance difference:       -0.0043381
+----------------------------------------
+----------------------------------------
+Files: BECToken/BECToken_2.evaluation & BECToken/transientBECToken_2.evaluation
+Normal Mean real time:     358.767 seconds
+Normal Variance:           3664.54
+Transient Mean real time:  151.123 seconds
+Transient Variance:        138.169
+Mean difference:           207.644 seconds
+Variance difference:       3526.37
+----------------------------------------
+----------------------------------------
+Files: BECToken/BECToken_3.evaluation & BECToken/transientBECToken_3.evaluation
+Normal Mean real time:     4.5255 seconds
+Normal Variance:           0.00835094
+Transient Mean real time:  4.4438 seconds
+Transient Variance:        0.0144657
+Mean difference:           0.0817 seconds
+Variance difference:       -0.00611476
+----------------------------------------
+----------------------------------------
+Files: BECToken/BECToken_4.evaluation & BECToken/transientBECToken_4.evaluation
+Normal Mean real time:     5.7368 seconds
+Normal Variance:           0.0376604
+Transient Mean real time:  5.6689 seconds
+Transient Variance:        0.00900943
+Mean difference:           0.0679 seconds
+Variance difference:       0.028651
+----------------------------------------
+----------------------------------------
+Files: BECToken/BECToken_5.evaluation & BECToken/transientBECToken_5.evaluation
+Normal Mean real time:     126.26 seconds
+Normal Variance:           55.3745
+Transient Mean real time:  124.075 seconds
+Transient Variance:        87.4
+Mean difference:           2.185 seconds
+Variance difference:       -32.0255
+----------------------------------------
+----------------------------------------
+Files: BECToken/BECToken_6.evaluation & BECToken/transientBECToken_6.evaluation
+Normal Mean real time:     2.8415 seconds
+Normal Variance:           0.190438
+Transient Mean real time:  2.6769 seconds
+Transient Variance:        0.268263
+Mean difference:           0.1646 seconds
+Variance difference:       -0.077825
+----------------------------------------
+----------------------------------------
+Files: BECToken/BECToken_7.evaluation & BECToken/transientBECToken_7.evaluation
+Normal Mean real time:     13.9255 seconds
+Normal Variance:           0.0328034
+Transient Mean real time:  12.9056 seconds
+Transient Variance:        0.0709003
+Mean difference:           1.0199 seconds
+Variance difference:       -0.0380969
+----------------------------------------
+----------------------------------------
+Files: WalletLibrary/WalletLibrary_1.evaluation & WalletLibrary/transientWalletLibrary_1.evaluation
+Normal Mean real time:     2.2795 seconds
+Normal Variance:           0.00424828
+Transient Mean real time:  2.3458 seconds
+Transient Variance:        0.00357973
+Mean difference:           -0.0663 seconds
+Variance difference:       0.00066855
+----------------------------------------
+----------------------------------------
+Files: WalletLibrary/WalletLibrary_2.evaluation & WalletLibrary/transientWalletLibrary_2.evaluation
+Normal Mean real time:     113.844 seconds
+Normal Variance:           0.900394
+Transient Mean real time:  77.5613 seconds
+Transient Variance:        2.17971
+Mean difference:           36.2827 seconds
+Variance difference:       -1.27932
+----------------------------------------
+----------------------------------------
+Files: calls/calls_1.evaluation & calls/transientcalls_1.evaluation
+Normal Mean real time:     26.3215 seconds
+Normal Variance:           2.77462
+Transient Mean real time:  25.1456 seconds
+Transient Variance:        2.3145
+Mean difference:           1.1759 seconds
+Variance difference:       0.46012
+----------------------------------------
+----------------------------------------
+Files: etherstore/etherstore_1.evaluation & etherstore/transientetherstore_1.evaluation
+Normal Mean real time:     18.5326 seconds
+Normal Variance:           0.30772
+Transient Mean real time:  12.8863 seconds
+Transient Variance:        0.0604962
+Mean difference:           5.6463 seconds
+Variance difference:       0.247224
+----------------------------------------
+----------------------------------------
+Files: hashforether/hashforether_1.evaluation & hashforether/transienthashforether_1.evaluation
+Normal Mean real time:     3.7008 seconds
+Normal Variance:           0.00936084
+Transient Mean real time:  3.6428 seconds
+Transient Variance:        0.00820884
+Mean difference:           0.058 seconds
+Variance difference:       0.001152
+----------------------------------------
+----------------------------------------
+Files: killbilly/killbilly_1.evaluation & killbilly/transientkillbilly_1.evaluation
+Normal Mean real time:     5.7143 seconds
+Normal Variance:           0.0105293
+Transient Mean real time:  5.6821 seconds
+Transient Variance:        0.0257552
+Mean difference:           0.0322 seconds
+Variance difference:       -0.0152259
+----------------------------------------
+----------------------------------------
+Files: origin/origin_1.evaluation & origin/transientorigin_1.evaluation
+Normal Mean real time:     4.9154 seconds
+Normal Variance:           0.00462471
+Transient Mean real time:  4.9175 seconds
+Transient Variance:        0.0185741
+Mean difference:           -0.0021 seconds
+Variance difference:       -0.0139494
+----------------------------------------
+----------------------------------------
+Files: returnvalue/returnvalue_1.evaluation & returnvalue/transientreturnvalue_1.evaluation
+Normal Mean real time:     5.7183 seconds
+Normal Variance:           0.613519
+Transient Mean real time:  5.5538 seconds
+Transient Variance:        0.482194
+Mean difference:           0.1645 seconds
+Variance difference:       0.131325
+----------------------------------------
+----------------------------------------
+Files: rubixi/rubixi_1.evaluation & rubixi/transientrubixi_1.evaluation
+Normal Mean real time:     338.339 seconds
+Normal Variance:           2421.82
+Transient Mean real time:  223.643 seconds
+Transient Variance:        64.0506
+Mean difference:           114.696 seconds
+Variance difference:       2357.77
+----------------------------------------
+----------------------------------------
+Files: suicide/suicide_1.evaluation & suicide/transientsuicide_1.evaluation
+Normal Mean real time:     3.8314 seconds
+Normal Variance:           0.00722693
+Transient Mean real time:  3.8928 seconds
+Transient Variance:        0.00822796
+Mean difference:           -0.0614 seconds
+Variance difference:       -0.00100103
+----------------------------------------
+----------------------------------------
+Files: timelock/timelock_1.evaluation & timelock/transienttimelock_1.evaluation
+Normal Mean real time:     8.1895 seconds
+Normal Variance:           0.0219052
+Transient Mean real time:  8.1075 seconds
+Transient Variance:        0.0131923
+Mean difference:           0.082 seconds
+Variance difference:       0.0087129
+----------------------------------------
